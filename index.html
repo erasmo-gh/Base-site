@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Nexus Café</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">NEON NEXUS</div>
+        <div class="menu">
+            <a href="#secao-inicio" class="link-menu">Início</a>
+            <a href="#secao-cardapio" class="link-menu">Cardápio</a>
+            <a href="#secao-arcade" class="link-menu">Fliperama</a>
+            <a href="#secao-horarios" class="link-menu">Horários</a>
+        </div>
+        <button id="botaoTema">
+            <span id="iconeTema">☾</span>   
+            <span id="textoBotao">Modo Arcade</span>
+        </button>        
+    </nav>
+
+    <main class="conteudo">
+        <div class="banner" id="secao-inicio">
+            <h1 id="tituloPrincipal">Neon Nexus Café</h1>
+            <p id="mensagem">Ambiente: Modo Cafeteria</p>
+            <p class="subtitulo">Conheça nosso espaço: cafés especiais, bebidas artesanais e máquinas de fliperama clássicas.</p>
+            <a href="#secao-cardapio" class="botao-banner link-menu">Consultar Cardápio</a>
+        </div>
+
+        <h2 class="titulo-secao">Menu Especial</h2>
+        <div class="area-cards" id="secao-cardapio">
+            <div class="card">
+                <div class="frente">
+                    <h3>Expresso 1-UP</h3>
+                    <p>Café expresso duplo intenso com raspas de canela.</p>
+                    <span class="preco">R$ 10,00</span>
+                </div>
+                <div class="verso">
+                    <img src="img/img.1.jpg" alt="Expresso 1-UP">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="frente">
+                    <h3>Cappuccino Pixel</h3>
+                    <p>Café expresso cremoso com leite vaporizado e cacau em pó.</p>
+                    <span class="preco">R$ 14,00</span>
+                </div>
+                <div class="verso">
+                    <img src="img/img.2.jpg" alt="Cappuccino Pixel">
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="frente">
+                    <h3>Mocha Final Boss</h3>
+                    <p>Café cremoso com calda de chocolate meio amargo e chantilly.</p>
+                    <span class="preco">R$ 16,00</span>
+                </div>
+                <div class="verso">
+                    <img src="img/img.3.jpg" alt="Mocha Final Boss">
+                </div>
+            </div>
+        </div>
+
+        <h2 class="titulo-secao">Área Fliperama</h2>
+        <div class="secao-arcade" id="secao-arcade">
+            <div class="texto-arcade">
+                <h3>Ambiente Retrô & Fichas</h3>
+                <p>No consumo presencial de qualquer bebida especial, você ganha uma ficha para jogar nas nossas máquinas:</p>
+                <ul>
+                    <li>Street Fighter II</li>
+                    <li>Metal Slug</li>
+                    <li>Pac-Man</li>
+                    <li>The King of Fighters</li>
+                </ul>
+
+                <div class="area-registro">
+                    <p><strong>Primeira visita?</strong> Cadastre seu e-mail para receber um voucher de 1 ficha gratuita no balcão:</p>
+                    <div class="form-ficha">
+                        <input type="email" id="campoEmail" placeholder="Digite seu e-mail">
+                        <button id="botaoFicha">Resgatar Ficha</button>
+                    </div>
+                    <p id="mensagemFicha"></p>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="titulo-secao">Funcionamento</h2>
+        <div class="caixa-info" id="secao-horarios">
+            <p><strong>Segunda a Quinta:</strong> 09h às 19h</p>
+            <p><strong>Sexta a Domingo:</strong> 14h às 18h</p>
+            <p><strong>Entrada:</strong> Gratuita (atendimento apenas presencial)</p>
+        </div>
+    </main>
+
+    <footer class="rodape">
+        <p id="textoRodape">Neon Nexus Café - 2026</p>
+    </footer>
+
+    <script src="js/script.js" type="text/javascript"></script>
+</body> 
+</html>

@@ -1,0 +1,365 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F4EFE6;
+    color: #2B1E16;
+    transition: 0.5s;
+}
+
+.navbar {
+    background-color: #E6D5B8;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+
+.menu a {
+    display: inline-block;
+    text-decoration: none;
+    color: #2B1E16;
+    font-weight: bold;
+    margin: 0 15px;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    transform: translateY(-3px);
+}
+
+#botaoTema {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #8B4513;
+    color: #FFF;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+#botaoTema:hover {
+    transform: translateY(-3px);
+}
+
+.conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.banner {
+    background-color: #FFF;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    margin-bottom: 40px;
+    transition: 0.5s;
+}
+
+.banner h1 {
+    font-size: 38px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#mensagem {
+    font-weight: bold;
+    color: #8B4513;
+}
+
+.subtitulo {
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.botao-banner, #botaoFicha {
+    display: inline-block;
+    background-color: #8B4513;
+    color: #FFF;
+    text-decoration: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.botao-banner:hover, #botaoFicha:hover {
+    transform: translateY(-3px);
+}
+
+.titulo-secao {
+    font-size: 26px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #8B4513;
+    padding-bottom: 8px;
+}
+
+.area-cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background-color: #FFF;
+    border-radius: 10px;
+    width: 33%;
+    height: 250px;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transform-style: preserve-3d;
+    transition: transform 0.6s, box-shadow 0.5s, background-color 0.5s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.card.virado {
+    transform: rotateY(180deg);
+}
+
+.card.virado:hover {
+    transform: rotateY(180deg) translateY(-8px);
+}
+
+.frente, .verso {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+
+.frente {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.frente h3 {
+    margin-top: 0;
+}
+
+.verso {
+    transform: rotateY(180deg);
+}
+
+.verso img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.preco {
+    display: inline-block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #8B4513;
+    font-size: 18px;
+}
+
+.secao-arcade, .caixa-info {
+    background-color: #FFF;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: 0.5s;
+}
+
+.secao-arcade h3 {
+    margin-top: 0;
+}
+
+.secao-arcade ul {
+    line-height: 1.8;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.area-registro {
+    border-top: 1px solid #E6D5B8;
+    padding-top: 20px;
+}
+
+.form-ficha {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+#campoEmail {
+    padding: 12px;
+    border: 1px solid #8B4513;
+    border-radius: 8px;
+    font-size: 15px;
+    width: 260px;
+}
+
+#mensagemFicha {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #8B4513;
+    min-height: 22px;
+}
+
+#secao-inicio.destaque,
+#secao-arcade.destaque,
+#secao-horarios.destaque,
+#secao-cardapio.destaque .card {
+    box-shadow: 0 12px 35px rgba(139, 69, 19, 0.45);
+}
+
+.rodape {
+    background-color: #E6D5B8;
+    text-align: center;
+    padding: 20px;
+    margin-top: 50px;
+    font-weight: bold;
+}
+
+body.escuro {
+    background: linear-gradient(135deg, #090D16 0%, #1A0B2E 50%, #09192F 100%);
+    color: #FFFFFF;
+}
+
+body.escuro .navbar,
+body.escuro .rodape {
+    background-color: rgba(15, 23, 42, 0.9);
+    border-bottom: 1px solid #D946EF;
+}
+
+body.escuro .rodape {
+    border-bottom: none;
+    border-top: 1px solid #D946EF;
+}
+
+body.escuro .logo {
+    color: #38BDF8;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
+}
+
+body.escuro .menu a {
+    color: #FFF;
+}
+
+body.escuro .menu a:hover {
+    color: #38BDF8;
+    text-shadow: 0 0 8px #38BDF8;
+}
+
+body.escuro .banner,
+body.escuro .card,
+body.escuro .caixa-info {
+    background-color: rgba(20, 18, 43, 0.85);
+    border: 1px solid #38BDF8;
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.25);
+}
+
+body.escuro .secao-arcade {
+    background-image: linear-gradient(rgba(20, 18, 43, 0.82), rgba(20, 18, 43, 0.82)), url("../img/img.banner.jpg");
+    background-size: cover;
+    background-position: center;
+    border: 1px solid #38BDF8;
+    box-shadow: 0 0 15px rgba(217, 70, 239, 0.25);
+}
+
+body.escuro .banner h1 {
+    text-shadow: 0 0 12px rgba(217, 70, 239, 0.8);
+}
+
+body.escuro .area-registro {
+    border-top: 1px solid #D946EF;
+}
+
+body.escuro #campoEmail {
+    background-color: #090D16;
+    color: #FFF;
+    border: 1px solid #38BDF8;
+}
+
+body.escuro #secao-inicio.destaque,
+body.escuro #secao-arcade.destaque,
+body.escuro #secao-horarios.destaque,
+body.escuro #secao-cardapio.destaque .card {
+    box-shadow: 0 0 30px rgba(217, 70, 239, 0.7), 0 0 15px rgba(56, 189, 248, 0.6);
+}
+
+body.escuro #mensagem,
+body.escuro .preco,
+body.escuro #mensagemFicha {
+    color: #38BDF8;
+    text-shadow: 0 0 8px rgba(56, 189, 248, 0.5);
+}
+
+body.escuro .titulo-secao {
+    border-bottom: 2px solid #D946EF;
+    text-shadow: 0 0 10px rgba(56, 189, 248, 0.5);
+}
+
+body.escuro #botaoTema,
+body.escuro .botao-banner,
+body.escuro #botaoFicha {
+    background: linear-gradient(90deg, #38BDF8, #D946EF);
+    color: #090D16;
+    box-shadow: 0 0 12px rgba(217, 70, 239, 0.6);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .menu a {
+        margin: 0 8px;
+    }
+
+    .area-cards {
+        flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    .form-ficha {
+        flex-direction: column;
+    }
+
+    #campoEmail {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
